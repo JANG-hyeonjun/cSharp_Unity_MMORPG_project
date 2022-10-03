@@ -2,4 +2,4 @@
 
 # Chpater2_BinaryTreeMaze_Result
 
-<img src="./BinaryTreeMaze.png"  width="200" height="400"/>
+<img src="./BinaryTreeMaze.png"  width="500" height="300"/>
