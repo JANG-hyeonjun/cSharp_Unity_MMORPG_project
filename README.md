@@ -2,5 +2,4 @@
 
 # Chpater2_BinaryTreeMaze_Result
 
-![Resul1](BinaryTreeMaze.png)
-
+<img src="./BinaryTreeMaze.png"  width="200" height="400"/>
