@@ -1,6 +1,6 @@
 # cSharp_Unity_MMORPG_project
+  ## Chpater2
+   ### Chpater2_BinaryTreeMaze_Result
+ <img src="./BinaryTreeMaze.png"  width="500" height="300"/>
 
-# Chpater2_BinaryTreeMaze_Result
-
-![Resul1](https://user-images.githubusercontent.com/60414838/150639325-f2219f7c-da93-4082-b3e0-14ed05bfa5aa.jpg)
-
+   ### Chpater2_SideWinder_Result
