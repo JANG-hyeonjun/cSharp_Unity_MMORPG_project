@@ -20,7 +20,7 @@ namespace Algorithm
         Board _board;
 
         enum Dir
-        { 
+        {
             Up = 0, // 3 
             Left = 1, // 4 // 0
             Down = 2, // 5 // 1
@@ -48,7 +48,7 @@ namespace Algorithm
             while (PosY != board.DestY || PosX != board.DestX)
             {
                 //1. 현재 바라보는 방향을 기준으로 오른쪽으로 갈수 있는지 확인
-                if(_board.Tile[PosY + rightY[_dir], PosX + rightX[_dir]] == Board.TileType.Empty)
+                if (_board.Tile[PosY + rightY[_dir], PosX + rightX[_dir]] == Board.TileType.Empty)
                 {
                     //오른쪽 방향으로 90도 회전
                     _dir = (_dir - 1 + 4) % 4;
@@ -59,7 +59,7 @@ namespace Algorithm
                     _points.Add(new Pos(PosY, PosX));
                 }
                 //2. 현재 바라보는 방향을 기준으로 전진 할 수 있는지 확인
-                else if(_board.Tile[PosY + frontY[_dir], PosX + frontX[_dir]] == Board.TileType.Empty)
+                else if (_board.Tile[PosY + frontY[_dir], PosX + frontX[_dir]] == Board.TileType.Empty)
                 {
                     //앞으로 한 보 전진
                     PosY = PosY + frontY[_dir];
@@ -84,9 +84,9 @@ namespace Algorithm
         {
             if (_lastIndex >= _points.Count)
                 return;
-            
+
             _sumTick += deltaTick;
-            if(_sumTick >= MOVE_TICK)
+            if (_sumTick >= MOVE_TICK)
             {
                 _sumTick = 0;
                 //여기에 0.1초 마다 실행될 로직을 넣어 준다.
