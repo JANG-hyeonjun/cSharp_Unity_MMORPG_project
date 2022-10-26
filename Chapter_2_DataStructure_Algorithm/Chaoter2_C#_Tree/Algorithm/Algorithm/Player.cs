@@ -62,13 +62,13 @@ namespace Algorithm
             found[PosY, PosX] = true;
             parent[PosY, PosX] = new Pos(PosY, PosX);
 
-            while(q.Count > 0)
+            while (q.Count > 0)
             {
                 Pos pos = q.Dequeue();
                 int nowY = pos.Y;
                 int nowX = pos.X;
 
-                for(int i = 0; i < 4; i++)
+                for (int i = 0; i < 4; i++)
                 {
                     int nextY = nowY + deltaY[i];
                     int nextX = nowX + deltaX[i];
@@ -88,7 +88,7 @@ namespace Algorithm
             int y = _board.DestY;
             int x = _board.DestX;
 
-            while(parent[y,x].Y != y || parent[y,x].X != x)
+            while (parent[y, x].Y != y || parent[y, x].X != x)
             {
                 _points.Add(new Pos(y, x));
                 Pos pos = parent[y, x];
