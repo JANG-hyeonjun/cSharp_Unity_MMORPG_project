@@ -257,7 +257,7 @@ namespace Algortihm
                 Initialize(1, 1, _board);
             }
                 
-
+            //이동 쿨타임을 체크해서 이동 시킨다.
             _sumTick += deltaTick;
             if (_sumTick >= MOVE_TICK)
             {
@@ -291,6 +291,19 @@ namespace Algortihm
                 //}
                 #endregion
             }
+
+            //애니메이션 갱신
+            //_anim.Update(deltaTick);
+
+            //스킬 쿨타임을 체크해서 스킬 날린다.
+            //_skill.Update(deltaTick);
+
+            //물리 적용(중력 등)
+            //_physics.Updaye(deltaTick);
         }
+
+        //AnimationComponent _anim = new Animation();
+        //SkillComponent _skill = new SkillComponenet();
+        //PhysicesComponent _physics = new PhysicsCoponenet();
     }
 }
