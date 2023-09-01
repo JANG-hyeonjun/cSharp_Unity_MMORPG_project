@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Define 
 {
-  public enum CameraMode
+    public enum MouseEvent
+    {
+        Press,
+        Click,
+    }
+    
+    public enum CameraMode
     {
         QutarView,
     }
