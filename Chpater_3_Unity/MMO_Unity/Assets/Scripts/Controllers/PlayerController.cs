@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     //PlayerController(*)
 
 
-    float wait_run_ratio = 0;
+    
 
     public enum PlayerState
     {
@@ -61,19 +61,18 @@ public class PlayerController : MonoBehaviour
         }
 
         //애니메이션
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 1, 10.0f * Time.deltaTime);
+        
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("WAIT_RUN");
+        //현재 게임에 대한 정보를 넘겨준다.
+        anim.SetFloat("speed", _speed);
+        
 
     }
 
     void UpdateIdle()
     {
-        wait_run_ratio = Mathf.Lerp(wait_run_ratio, 0, 10.0f * Time.deltaTime);
         Animator anim = GetComponent<Animator>();
-        anim.SetFloat("wait_run_ratio", wait_run_ratio);
-        anim.Play("WAIT_RUN");
+        anim.SetFloat("speed", 0);
     }
 
     void Update() //한프레임당 호출 됨 -> 60 프레임 이라고 하고 60분의 1초마다 호출되는 것 
