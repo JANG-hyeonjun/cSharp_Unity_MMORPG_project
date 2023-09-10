@@ -48,8 +48,19 @@ namespace MoreOnArray
 
             scores[index] = 61;
             Console.WriteLine("EveryOne Passed ? : {0}", Array.TrueForAll<int>(scores, CheckPassed));
-        
-            
+
+            Console.WriteLine($"Old length of scores : {scores.GetLength(0)}");
+
+            Array.Resize<int>(ref scores, 10);
+
+            Console.WriteLine($"New length of scores : {scores.GetLength(0)}");
+
+            Array.ForEach<int>(scores, new Action<int>(Print));
+            Console.WriteLine();
+
+            Array.Clear(scores, 3, 7);
+            Array.ForEach<int>(scores, new Action<int>(Print));
+            Console.WriteLine();
         }
     }
 }
