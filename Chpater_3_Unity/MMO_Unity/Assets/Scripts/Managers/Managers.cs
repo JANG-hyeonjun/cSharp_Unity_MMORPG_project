@@ -9,16 +9,18 @@ public class Managers : MonoBehaviour
     //public static Managers GetInstance() { init(); return s_instance; } //유일한 매니저를 갖고 온다.
     InputManager _input = new InputManager();
     ResourceManager _resource = new ResourceManager();
+    UIManager _ui = new UIManager();
+    
     public static InputManager Input { get { return Instance._input; }}
     public static ResourceManager Resource { get { return Instance._resource; }}
 
-    // Start is called before the first frame update
+    public static UIManager UI { get { return Instance._ui; } } 
+    
     void Start()
     {
         init();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _input.OnUpdate();   
